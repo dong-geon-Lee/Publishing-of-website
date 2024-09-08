@@ -229,3 +229,108 @@ section {
   color: var(--bg-color);
   transform: scale(0.9);
 }
+
+header.sticky {
+  background-color: var(--text-color);
+  padding: 20px 15%;
+  box-shadow: 0px 4px 15px rgb(0, 0, 0 / 8%);
+}
+
+.middle-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem; /** 갭은 왜쓴거지? */
+}
+
+.mid-left h2 {
+  font-size: var(--h2-font);
+  font-weight: 700;
+}
+
+.mid-left h6 {
+  font-family: "Fasthand", cursive;
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--main-color);
+}
+
+/* 아이콘을 중앙으로 옮기려는 절차가 조금 번거로운데? */
+.mid-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* 여기포함 */
+.mid-right i {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  width: 60px;
+  color: var(--text-color);
+  background-color: transparent;
+  border: 1px solid var(--main-color);
+  border-radius: 50%;
+  font-size: 20px;
+  transition: all 0.7s ease;
+}
+
+.mid-right i:hover {
+  background-color: var(--main-color);
+  color: var(--bg-color);
+  border: 1px solid var(--main-color);
+}
+
+.destination-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.row {
+  transition: all 0.7s ease;
+}
+
+.row-img {
+  position: relative;
+  transition: all 0.5s;
+}
+
+.row-img img {
+  width: 100%;
+  height: auto;
+  border-radius: 10%;
+}
+
+/* 굳이 flex를 왜쓰지? */
+.star {
+  position: absolute;
+  top: 5%;
+  right: 8%;
+  display: flex;
+  align-items: center;
+  padding: 8px 15px;
+  background-color: var(--bg-color);
+  font-size: 15px;
+  border-radius: 10%;
+}
+
+.star i {
+  color: #f2712a;
+  font-size: 21px;
+}
+
+.star a {
+  font-size: var(--p-font);
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.row:hover {
+  transform: scale(1.1) translateY(-5px);
+  cursor: pointer;
+}
